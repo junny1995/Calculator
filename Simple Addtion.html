@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Simple Addition</title>
+
+    <style>
+      .container
+      {
+        background-color: lightblue;
+        width: 30%;
+        padding: 10px;
+      }
+      .section1
+
+      {
+
+        background-color: red;
+        justify-content: space-between;
+      }
+    </style>
+
+  </head>
+  
+  <body>
+    <div class="container">
+            <label for="firstNum">Number 1:</label>
+            <br>
+            <input type="text" id="firstNum" name="firstNum"> 
+            <br>
+            <label for="secondNum">Number 2:</label>
+            <br>
+            <input type="text" id="secondNum" name="secondNum">
+            <br>
+            <label for="txtSum">Sum:</label>
+            <br>
+            <input type="number" id="txtSum" name="txtSum" disabled>
+            <br><br>
+            <input type="button" value="Add" onclick="add()">
+            <input type="button" value="Reset" onclick="reset()">
+            <br><br>
+
+            <!--Button number area -->
+
+            <section class="section1">
+              <button>1</button>
+              <button>2</button>
+              <button>3</button>
+              <br>
+              <button>4</button>
+              <button>5</button>
+              <button>6</button>
+              <br>
+              <button>7</button>
+              <button>8</button>
+              <button>9</button>
+              <br>
+              <button>0</button>
+            </section>
+
+
+
+
+
+    </div>
+
+    <script>
+      
+      function reset()
+      {
+        document.getElementById('firstNum').value="";
+        document.getElementById('secondNum').value="";
+        document.getElementById('txtSum').value="";
+      }
+
+      function add()
+      {
+        var num1 = Number(document.getElementById("firstNum").value);
+        var num2 = Number(document.getElementById("secondNum").value);
+        var sum = num1 + num2;
+        console.log(sum);
+        document.getElementById("txtSum").value = sum;
+      }
+
+
+    </script>
+  </body>
+</html>
